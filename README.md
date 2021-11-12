@@ -1,14 +1,18 @@
-`**GET** - /bahan`
+**GET** - `/bahan`
+
 get semua bahan
 
 
-`**GET** - /bahan/{id}`
+**GET** - `/bahan/{id}`
+
 get bahan dengan id {id}
 
 
-`**GET** - /menu`
+**GET** - `/menu`
+
 get semua menu
 
 
-`**GET** - /menu/{id_bahan}`
+**GET** - `/menu/{id_bahan}`
+
 get menu yang mengandung bahan dengan id bahan {id_bahan}
