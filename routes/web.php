@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BahanController;
 use App\Http\Controllers\ResepController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,5 @@ Route::get('/bahan/{id}', [BahanController::class, 'get']);
 Route::get('/resep',[ResepController::class, 'get']);
 Route::get('/resep/{id}', [ResepController::class, 'get']);
 Route::post('/register', [AccountController::class, 'register']);
-Route::get('/register', [AccountController::class, 'test']);
 Route::post('/login', [AccountController::class, 'login']);
+Route::post('/rating', [RatingController::class, 'rate']);

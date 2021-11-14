@@ -24,3 +24,7 @@ register account, return user_key
 **POST** - `/login`
 
 login account, return user key
+
+**POST** - `/rating`
+
+rate menu
