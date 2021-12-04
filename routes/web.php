@@ -5,6 +5,7 @@ use App\Http\Controllers\BahanController;
 use App\Http\Controllers\ResepController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/bahan', [BahanController::class, 'get']);
 Route::get('/bahan/{id}', [BahanController::class, 'get']);
 Route::get('/resep',[ResepController::class, 'get']);
 Route::get('/resep/{id}', [ResepController::class, 'get']);
+Route::get('/search/username/{username}', [SearchController::class, 'username']);
+Route::get('/search/resep/{query}', [SearchController::class, 'resep']);
 Route::post('/register', [AccountController::class, 'register']);
 Route::post('/login', [AccountController::class, 'login']);
 Route::post('/rating', [RatingController::class, 'rate']);

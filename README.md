@@ -13,9 +13,17 @@ get bahan dengan id {id}
 get semua menu
 
 
+**GET** - `/search/username/{username}`
+
+lihat apakah username tersedia
+
 **GET** - `/menu/{id_bahan}`
 
 get menu yang mengandung bahan dengan id bahan {id_bahan}
+
+**GET** - `/search/menu/{query}`
+
+get menu dengan nama yang mengandung string {query}
 
 **POST** - `/register`
 
