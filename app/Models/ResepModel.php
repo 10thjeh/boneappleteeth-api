@@ -46,4 +46,17 @@ class ResepModel extends Model
       $query = DB::table('rating')->where('id_menu', $id)->count();
       return $query;
     }
+
+    public function add($request){
+        $query = DB::table('menu')->insert([
+          'nama' => $request->nama,
+          'foto' => '',
+          'waktu' => $request->waktu,
+          'kesulitan' => $request->kesulitan,
+          'resep' => $request->resep,
+          'author' => $request->author
+        ]);
+
+        return $query;
+    }
 }

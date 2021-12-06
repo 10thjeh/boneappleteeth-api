@@ -31,3 +31,4 @@ Route::get('/search/resep/{query}', [SearchController::class, 'resep']);
 Route::post('/register', [AccountController::class, 'register']);
 Route::post('/login', [AccountController::class, 'login']);
 Route::post('/rating', [RatingController::class, 'rate']);
+Route::post('/resep', [ResepController::class, 'add']);
