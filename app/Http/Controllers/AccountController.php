@@ -32,7 +32,8 @@ class AccountController extends Controller
     ]);
 
     if(AccountModel::login($request)){
-      return AccountController::success($request->username);
+      $response = AccountModel::get($request->username);
+      return $response;
     }
 
     return AccountController::failed();

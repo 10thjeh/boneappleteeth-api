@@ -33,4 +33,9 @@ class AccountModel extends Model
       $query = DB::table('user')->where('username', $username)->first();
       return $query->user_key;
     }
+
+    public function get($username){
+      $query = DB::table('user')->where('username', $username)->first();
+      return $query;
+    }
 }
