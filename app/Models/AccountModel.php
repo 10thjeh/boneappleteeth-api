@@ -38,4 +38,18 @@ class AccountModel extends Model
       $query = DB::table('user')->where('username', $username)->first();
       return $query;
     }
+
+    public function account_update($request){
+      $query = DB::table('user')->where('username', $request->username)->update([
+        'email' => $request->email,
+        'alamat' => $request->alamat
+      ]);
+
+      return $query;
+    }
+
+    public function account_delete($request){
+      $query = DB::table('user')->where('username', $request->username)->delete();
+      return $query;
+    }
 }

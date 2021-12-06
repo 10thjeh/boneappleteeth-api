@@ -6,6 +6,7 @@ use App\Http\Controllers\ResepController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,11 @@ Route::get('/resep',[ResepController::class, 'get']);
 Route::get('/resep/{id}', [ResepController::class, 'get']);
 Route::get('/search/username/{username}', [SearchController::class, 'username']);
 Route::get('/search/resep/{query}', [SearchController::class, 'resep']);
+Route::get('/resepuser/{username}', [ResepController::class, 'getWithUsername']);
+Route::get('/news', [NewsController::class, 'get']);
 Route::post('/register', [AccountController::class, 'register']);
 Route::post('/login', [AccountController::class, 'login']);
 Route::post('/rating', [RatingController::class, 'rate']);
 Route::post('/resep', [ResepController::class, 'add']);
+Route::post('/update', [AccountController::class, 'update']);
+Route::post('/delete', [AccountController::class, 'del']);

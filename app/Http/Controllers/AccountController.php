@@ -61,4 +61,36 @@ class AccountController extends Controller
     ]);
   }
 
+  public function new_success(){
+    return response()->json([
+      'status' => '200',
+      'message' => 'success'
+    ]);
+  }
+
+  public function update(Request $request){
+    $request->validate([
+      'username' => 'required',
+      'email' => 'required|email',
+      'alamat' => 'required'
+    ]);
+
+    if(AccountModel::account_update($request)){
+      return AccountController::new_success();
+    }
+    return AccountController::failed();
+  }
+
+  public function del(Request $request){
+    $request->validate([
+      'username' => 'required'
+    ]);
+
+    if(AccountModel::account_delete($request)){
+      return AccountController::new_success();
+    }
+
+    return AccountController::failed();
+  }
+
 }

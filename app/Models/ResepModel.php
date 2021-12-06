@@ -59,4 +59,9 @@ class ResepModel extends Model
 
         return $query;
     }
+
+    public function getWithUsername($username){
+      $query = DB::table('menu')->where('author', $username)->get();
+      return $query;
+    }
 }

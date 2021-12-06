@@ -29,6 +29,11 @@ class ResepController extends Controller
       return ResepController::failed();
     }
 
+    public function getWithUsername($username){
+      $response = ResepModel::getWithUsername($username);
+      return $response->toJson(JSON_PRETTY_PRINT);
+    }
+
     public function success(){
       return response()->json([
         'status' => '200',
